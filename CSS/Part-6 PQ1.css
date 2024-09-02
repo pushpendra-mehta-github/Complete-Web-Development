@@ -1,0 +1,34 @@
+a{
+    font-style: italic;
+    color: tomato;
+    font-weight: bold;
+}
+
+span{
+    color:#9d6f24;
+}
+.card{
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+}
+img{
+    width: 400px;
+    border-radius: 25px;
+}
+#pet{
+    display: flex;
+    justify-content: space-evenly;
+}
+h4{
+    text-align: right;
+    color: #3c787e;
+}
+
+@media (max-width:375px) {
+    #pet{
+       flex-wrap:wrap;
+    }
+}
