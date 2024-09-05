@@ -3,9 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logo.png">
+    <title> Spotify - Web Player: Music for everyone </title>
+<link rel="stylesheet" href="Spotify.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Spotify clone</h1>
+   
+   
+    <div class="main">
+     
+     <div class="sidebar">
+        
+        <div class="nav" > 
+            <div class="nav-option">
+                <i class="fa-solid fa-house"></i>
+                <a href="#">Home</a>
+            </div>    
+    
+            <div class="nav-option">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="#">Search</a>
+            </div>    
+            </div>
+
+        <div class="library">
+       
+            <div class="option">
+            <div class="lib-option nav-option">
+                <img src="library_icon.png" alt="library icon">
+                <a href="#" >Your Library</a>
+            </div> 
+
+            <div class="icon">
+                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div> 
+        </div>
+
+        <div class="lib-boxes"> </div>
+        <div class="boxes">
+            <p class="box-p1">Create your first playlist</p>
+            <p class="box-p2">It's easy,we'll helf you</p>
+            <button class="badge"> Create playlist </button>
+        </div>
+        <div class="boxes">
+            <p class="box-p1">Let's find some podcasts to follow</p>
+            <p class="box-p2">We'll keep you updated on new episodes</p>
+            <button class="badge"> Browse podcasts </button>
+        </div>
+    </div> 
+</div>
+
+     <div class="main-content">
+        <div class="sticky-nav">
+           
+            <div class="sticky-nav-icon">
+                <img src="backward_icon.png" alt="">
+                <img src="forward_icon.png" class="hide" alt="">
+            </div>
+            
+            <div class="sticky-nav-option">
+                <button class="badge nav-item hide"> Explore Premium </button>
+                <button class="badge nav-item dark-badge"><i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i> Install App </button>
+                <i class="fa-regular fa-user nav-item"></i>
+            </div>
+            
+        </div>
+        
+    <h2>Reacently Played</h2>
+        <div class="card-container">
+         <div class="card">
+              <img src="card1img.jpeg" class="card-image" alt="img">  
+              <p class="card-title">Top 50- Global</p>
+              <p class="card-info">Your daily updates Of the most played trackss...</p>
+        </div>
+        <div class="card">
+            <img src="card2img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Top 50- Global</p>
+            <p class="card-info">Your daily updates Of the most played trackss...</p>
+       </div>
+       <div class="card">
+        <img src="card5img.jpeg" class="card-image" alt="img">  
+        <p class="card-title">Top 50- Global</p>
+        <p class="card-info">Your daily updates Of the most played trackss...</p>
+        </div>
+        <div class="card">
+            <img src="card6img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Top Songs- India</p>
+            <p class="card-info">Your daily updates Of the most played trackss...</p>
+      </div>
+      <div class="card">
+        <img src="card2img.jpeg" class="card-image" alt="img">  
+        <p class="card-title">Top 50- Global</p>
+        <p class="card-info">Your daily updates Of the most played trackss...</p>
+   </div>
+
+     </div>
+
+     <h2>Trending now near you</h2>
+        <div class="card-container">
+         <div class="card">
+            <img src="card2img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Mahiye Jinna Sohna</p>
+            <p class="card-info">Your daily updates Of the most played trackss...</p>
+        </div>
+        <div class="card">
+            <img src="card3img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Top 50- Global</p>
+            <p class="card-info">Your daily updates Of the most played trackss...</p>
+       </div>
+       <div class="card">
+            <img src="card4img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Naa Ready</p>
+            <p class="card-info">Anirudra Ravichander,Thalapathy Vijay...</p>
+            </div>
+        <div class="card">
+            <img src="card1img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Top 50- Global</p>
+            <p class="card-info">Your daily updates Of the most played trackss...</p>
+            </div>
+       <div class="card">
+            <img src="card3img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Top 50- Global</p>
+            <p class="card-info">Your daily updates Of the most played trackss...</p>
+            </div>  
+        <div class="card">
+            <img src="card4img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Naa Ready</p>
+            <p class="card-info">Anirudra Ravichander,Thalapathy Vijay...</p>
+            </div>  
+        <div class="card">
+            <img src="card5img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Top 50- Global</p>
+            <p class="card-info">Your daily updates Of the most played trackss...</p>
+            </div>
+      </div>
+
+      <h2>Featured Charts</h2>
+        <div class="card-container">
+         <div class="card">
+              <img src="card6img.jpeg" class="card-image" alt="img">  
+              <p class="card-title">Top Songs- India</p>
+              <p class="card-info">Your daily updates Of the most played trackss...</p>
+        </div>
+        <div class="card">
+            <img src="card5img.jpeg" class="card-image" alt="img">  
+            <p class="card-title">Top 50- Global</p>
+            <p class="card-info">Your daily updates Of the most played trackss...</p>
+      </div>
+      <div class="card">
+        <img src="card2img.jpeg" class="card-image" alt="img">  
+        <p class="card-title">Mahiye Jinna Sohna</p>
+        <p class="card-info">Your daily updates Of the most played trackss...</p>
+      </div>
+      <div class="card">
+        <img src="card6img.jpeg" class="card-image" alt="img">  
+        <p class="card-title">Top Songs- India</p>
+        <p class="card-info">Your daily updates Of the most played trackss...</p>
+      </div>
+      <div class="card">
+        <img src="card1img.jpeg" class="card-image" alt="img">  
+        <p class="card-title">Top Songs- India</p>
+        <p class="card-info">Your daily updates Of the most played trackss...</p>
+     </div>
+  </div>
+    
+  <h2>Shoes to Try</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="card2img.jpeg" class="card-image" alt="img">  
+         <p class="card-title">Mahiye Jinna Sohna</p>
+         <p class="card-info">Your daily updates Of the most played trackss...</p>
+      </div>
+      <div class="card">
+        <img src="card1img.jpeg" class="card-image" alt="img">  
+         <p class="card-title">Mahiye Jinna Sohna</p>
+         <p class="card-info">Your daily updates Of the most played trackss...</p>
+      </div>
+      <div class="card">
+        <img src="card4img.jpeg" class="card-image" alt="img">  
+         <p class="card-title">Mahiye Jinna Sohna</p>
+         <p class="card-info">Your daily updates Of the most played trackss...</p>
+      </div>
+   </div>
+  
+   <hr>
+
+<br><br><br><br><br><br>
+
+</div>
+
+   <div class="music-player">
+   
+    <div class="Album">
+    
+    <div class="photo">
+     <img  src="image7.png" alt="">
+    </div>
+
+    <div class="song-name">
+     <a class="anchor-1"> Tauaba Tauaba(From"Bad News") </a> <br>
+     <a class="anchor-2"> Karan Aujla </a>
+    </div>
+    
+    <span>
+        <i class="fa-solid fa-circle-plus"></i>
+    </span>
+   
+</div>
+
+
+      
+    <div class="player">
+        <div class="player-controls">
+            <img src="player_icon1.png" class="player-control-icon" alt="">
+            <img src="player_icon2.png" class="player-control-icon" alt="">
+            <img src="player_icon3.png" class="player-control-icon" alt="" style="opacity: 1; height:2rem;width:2rem;">
+            <img src="player_icon4.png" class="player-control-icon" alt="">
+            <img src="player_icon5.png" class="player-control-icon" alt="">
+        </div>
+        <div class="playback-bar">
+           <span class="current-time">00:34</span> 
+           <input type="range" class="progress-bar" >
+           <span class="total-time">3:33</span>
+        </div>
+    </div>
+     
+      <div class="controls">
+        <i class="fa-solid fa-circle-stop"></i>
+        <i class="fa-solid fa-microphone"></i>
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-house-signal"></i>
+        <label for="mute"><i class="fa-solid fa-volume-low"  ></i></label>
+        <input type="range" id="mute">
+        <i class="fa-solid fa-maximize"></i>
+        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+      </div>
+     
+    </div>
+<div>
 </body>
 </html>
