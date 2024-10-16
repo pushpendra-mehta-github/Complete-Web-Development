@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign-Part-7</title>
+    <script>
+
+
+/* Qs1. Write an arrow function named arrayAverage that accepts an array of numbers
+and returns the average of those numbers.  */
+
+const numbers = [10, 20, 30, 40];
+
+ const arrayAverage = (array) => {
+     let sum =  numbers.reduce( (index ,add) => index + add,0); 
+       return sum / numbers.length;
+ } 
+ console.log(" the average of number : ",arrayAverage(numbers));
+
+
+
+ /* Qs2. Write an arrow function named isEven() that takes a single number as argument
+and returns if it is even or not. */
+
+
+const isEven = (value) => {
+  if(value % 2 == 0){
+    console.log("Number is Even");
+  }
+  else{
+    console.log("Number is Odd");
+  }
+}
+
+console.log(isEven(18));   //  Number is Even
+console.log(isEven(131));  //  Number is Odd
+
+
+
+
+/* Qs3.What is the output of the following code: */
+
+
+const object = {
+  
+massage : "Hello,coders" ,
+ 
+logMassage() {
+    console.log(this.massage);
+ }
+};
+
+console.log(setTimeout(object.logMassage,1000));
+
+// output --> After a delay of 1 second, undefined is logged to the console.
+
+
+/* Qs4.What is the output of the following code: */
+
+let length = 4; 
+function callback() {
+  console.log(this.length);
+}
+
+const object2 = {
+  length: 5,
+  method(callback) {
+    callback();
+  }
+}
+
+object.method(callback, 1, 2);
+
+// output --> The code you provided will output 4
+
+
+    </script>
+</head>
+<body>
+    <h1> i Love Programming ..... <h1>
+</body>
+</html>

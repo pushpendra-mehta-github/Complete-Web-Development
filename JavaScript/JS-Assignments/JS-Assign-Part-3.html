@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignment - 3 </title>
+    <script>
+    
+ //AQ.1.   write a javascript program to get the first n elements of an array.[n can be any positive number].
+
+ const arr  = [7,9,0,-2];
+ const n   = 3;
+
+let result  = arr.slice(0,n);
+console.log(result);
+
+
+
+//AQ.2.  Write a JavaScript program to get the last n elements of an array.[n can be any positive number].
+
+
+const arr2  = [7,9,0,-2];
+ const n2   = 4;                            // [7, 9, 0]
+ 
+let result2  = arr2.slice(1,n2);
+console.log(result2);                   // [9, 0, -2]
+
+
+
+// Qs.3.Write a JavaScript program to check whether a string is blank or not.
+
+
+let str =  prompt("please enter a string")
+
+if(str.length == 0){
+   console.log("The string is Empty");  
+}
+else{
+    console.log("string is not Empty"); // The string is Empty
+}
+
+
+
+
+//AQ.4.Write a JavaScript program to test whether the character at the given(character) index is lowercase.
+
+
+const str2 = "PUSHPENDRA";
+
+const char = str2.charAt(0);
+
+if(char >= 'P' || char <= 'z'){
+    console.log("The character is Uppercase"); 
+}
+else{
+    console.log("The character is Lowercase");  // The character is Uppercase
+}
+
+
+
+
+// AQ.5. Write a JavaScript program to strip leading and trailing spaces from a string.
+
+let space = "    Raja Mohli   ";
+
+let newspace = space.trim();
+
+console.log("After Reduce spaces : " ,newspace);    // 'Raja Mohli'
+  
+
+
+// AQ.6. Write a JavaScript program to check if an element exists in an array or not.
+
+let exist = ["ram","syam","vyas","gagan"];
+
+if(exist.includes("syam")){
+    console.log(`${"syam"} exists in the array`);
+}
+else{
+    console.log(`${"syam"} exists does not exist in the array`);
+}
+
+
+
+    </script>
+
+</head>
+<body>
+    <h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis et alias ipsum dolor itaque vitae molestias non doloremque esse praesentium molestiae quae harum necessitatibus hic quasi quaerat excepturi, nulla consequuntur.
+    </h1>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo With Dom</title>
+</head>
+<body>
+ 
+<h1 style="color: green;">Todo App With DOM </h1>
+
+<input type="text" placeholder="Enter you Task" id="">
+
+<button> Add Task </button>
+
+<ol>
+    <li>Eat <button class="delete">delete</button></li>
+    <li>sleep <button class="delete">delete</button></li>
+    <li>bathing <button class="delete">delete</button></li>
+</ol>
+
+
+
+
+
+
+   <script>
+
+let inp = document.querySelector("input");
+let btn = document.querySelector("button");
+let order = document.querySelector("ol");
+
+btn.addEventListener("click",function(){
+ let item =  document.createElement("li");
+ item.innerText = inp.value;
+
+ let delbtn = document.createElement("button");
+     delbtn.innerText = "delete";
+     delbtn.classList.add("delete");
+     item.appendChild(delbtn);
+
+  
+ order.appendChild(item);
+ console.log(`${inp.value} : Task Added..`);
+    inp.value = "";
+item.style.color = "green"; 
+
+});
+
+// The Task is deleted by Event Delegation
+
+order.addEventListener("click",function(event) {
+    // console.dir(event.target.nodeName);
+   if(event.target.nodeName == "BUTTON"){
+      let listItem =  event.target.parentElement; 
+      listItem.remove();
+      console.log(" Task deleted...!");
+   }
+    
+});
+
+
+    </script>
+</body>
+</html>

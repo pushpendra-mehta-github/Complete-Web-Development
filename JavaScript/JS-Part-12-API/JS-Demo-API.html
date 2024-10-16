@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS API</title>
+</head>
+<body>
+    
+ <h1> JS Api Demo </h1>
+
+ 
+
+
+
+
+
+
+<script>
+
+// JSON Functions--> there are two json faunctions are availavle 
+
+// 1 JSON.parse() 
+// 2 JSON.stringify()
+
+
+let jsonRes = '{"fact":"The domestic cat is the only species able to hold its tail vertically while walking. You can also learn about your cats present state of mind by observing the posture of his tail.","length":180}'
+
+ let valid_Res = JSON.parse(jsonRes).fact;  
+ 
+console.log(valid_Res); //The domestic cat is the only species able to hold its tail vertically while walking. You can also learn about your cats present state of mind by observing the posture of his tail.
+
+let student = {
+ Name: "pushpendra_mehta",
+ Class: "BCA",
+ Hobby: "Acting and Technology",
+ Phone: 637683
+};
+
+
+
+// this is formate of an Object 
+console.log(student); // {Name: 'pushpendra_mehta', Class: 'BCA', Hobby: 'Acting and Technology', Phone: 637683}
+
+
+// this is an JSON formate 
+console.log(JSON.stringify(student));  
+//--->  {"Name":"pushpendra_mehta","Class":"BCA","Hobby":"Acting and Technology","Phone":637683}
+
+
+</script>
+</body>
+</html>

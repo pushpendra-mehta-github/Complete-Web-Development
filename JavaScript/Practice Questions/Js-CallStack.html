@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JSCallStack </title>
+
+</head>
+
+
+<body>
+    
+<h1> JS Call Stack </h1>
+
+<script>
+
+function onlyOne() {
+  return 1;
+}
+
+function onlyTwo() {
+  return onlyOne() + onlyOne();
+}
+
+function onlyThree() {
+  let ans = onlyTwo() + onlyOne();
+  console.log("Function stack no. : ",ans);
+}
+
+onlyThree();
+
+</script>
+
+</body>
+</html>

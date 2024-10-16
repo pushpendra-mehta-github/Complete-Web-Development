@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Part - 5 </title>
+    <script>
+  
+/*
+  Q.1. Create a program that generates a random number representing a dice roll.
+[The number should be between 1 and 6]. */
+
+    
+
+    const dice = prompt("Enter The Number ");
+  
+    const random  = Math.floor( (Math.random() * 6))  + 1;
+
+    console.log(random);
+
+    let guess =  prompt("guess the number ");
+
+    while(true){
+     
+        if(guess == "quit") {
+           console.log("user quit");
+           break;
+         } 
+ 
+        if(random == guess){
+            console.log("Congrats 😎  your number is right ! your ramdom number was : ",random)
+            break;
+        }
+        else if (guess < random ){
+            guess = prompt ("your number is To Small ,please try again ...");
+        }
+        else{
+        
+            guess = prompt ("your number is To Large ,please try again ...");
+        
+        }
+    }
+
+    // output :  Congrats 😎  your number is right ! your ramdom number was :  2
+
+
+ /*  Qs2.Create an object representing a car that stores the following properties for the car:
+    name,model,color.
+    Print the car’s name.   */ 
+
+
+    let car = {
+ 
+       name : "Fortuner",
+       model : "Toyota Fortuner 4X2 Diesel AT",
+       color : "black",
+       Mileage : 11,
+       Engine : "2755 cc",
+     Seating_Capacity : 7
+    }
+
+    console.log( car.name); //  Fortuner
+
+
+
+ /* Qs3.Create an object Person with their name,age and city.Edit their city’s original value to change it to“NewYork”.
+ Add a new property country and set it to the United States. */   
+
+ let person = {
+
+      name : "pushpendra",
+      age : 20,
+      city : "kota"
+ }
+
+
+
+ // {name: 'pushpendra', age: 20, city: 'kota'}
+
+ console.log("After Edit their city’s : ",person.city = "NewYork"); 
+ 
+ console.log("Add a new property country : ",person.Country = "United States"); 
+
+ console.log(person);
+ // {name: 'pushpendra', age: 20, city: 'NewYork', Country: 'United States'}
+
+
+
+    </script>
+</head>
+<body>
+    
+    <h1>Assignment Part 5 </h1>
+</body>
+</html>

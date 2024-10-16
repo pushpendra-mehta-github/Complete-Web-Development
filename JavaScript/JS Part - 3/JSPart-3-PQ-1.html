@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Questions </title>
+  
+    <script>
+
+let massage = "help!";
+
+console.log(massage.trim().toUpperCase());
+
+
+let massage2 = "gand mara!";
+
+console.log(massage2.trim().toUpperCase());
+
+let  name = "ApnaCollage";
+
+console.log(name.slice(4,9));
+
+console.log(name.indexOf("C"));
+
+console.log(name.replace("Collage", "विद्यालय"));
+
+console.log(name.slice(4).replace("ll", "tt"));
+
+
+//Qs.2. For the given start state of an array, change it to final form using methods.
+
+
+let months = ["january","july","march","August"];  //To Change Array Indexes
+
+console.log(months.shift());   
+console.log(months.shift()); 
+console.log(months.unshift("june"));   
+console.log(months.unshift("july"));   
+
+
+
+
+console.log(months);  
+
+//Qs.3. For the given start state of an array, change it to final form using splice methods.
+
+let names = ["Aakash","dileep","ayush","piyush"];  //To Change Array Indexes
+
+console.log(names.splice(0,2,"Mohit","sonali"));  //  [ 'Mohit', 'sonali', 'ayush','piyush']
+
+
+console.log(names);  
+
+
+//Qs.4. Return the index of "JavaScript" from the given array ,it was reverse..?
+
+
+let lang = ["C","C++","JAVA","JavaScript","Phython","React","Nodejs","C#"];
+
+console.log(lang.reverse().indexOf("JavaScript"));
+
+
+
+// Qs.5. Create a nested array to shaow the folloeing tic-tac-toe game state..?
+
+
+let tictac  = [["X",null,"O"],[null,"X",null],["O",null,"X"]]
+
+console.log(tictac);
+
+tictac[0][1] = 'O'; // ["X","O","O"]
+console.log(tictac);
+
+tictac[2][0] = 'X';  //  ["X",null,"X"]
+console.log(tictac);
+
+
+</script>
+
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste facere, animi vel fugiat error? Necessitatibus numquam unde cum voluptatem!</h1>
+</body>
+
+
+</html>

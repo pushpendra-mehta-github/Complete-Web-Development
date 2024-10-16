@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <script>
+
+   let Todo = [];    
+ 
+   let req = prompt("ENTER YOUR REQUEST HERE") ;
+    
+    while(true){ 
+        if(req =="quit"){
+            console.log("quitting app...");
+            break;
+        }
+      
+        if(req == "list"){
+            console.log("---------------");
+            for(let i=0; i < Todo.length;i++){
+           console.log(i,Todo[i]);
+        }
+           console.log("---------------");
+       } else if(req == "add"){
+          let task = prompt("ENTER YOUR TASK YOU WANT TO ADD");
+          Todo.push(task);
+          console.log("congrats, your task added");
+       }
+       else if(req =="delete"){
+        let idx = prompt("please,Enter the task index");
+           Todo.splice(idx,1);
+           console.log("Task deleted"); 
+    }
+    else{
+        console.log("wrong Request❗");
+    }
+         req = prompt("ENTER YOUR REQUEST HERE") ;
+
+    }
+
+
+    /*
+    congrats, your task added
+    add
+     ---------------
+              0 'list
+              1 'simla'
+              2 'manali'                                  
+              3 'kasol'
+              4 'manipuram'
+              5 'udaipur                                '                               
+              6 'dehli'  
+    list
+     ---------------           
+              0 'list
+              1 'simla'
+              2 'manali'                                  
+              3 'kasol'
+              4 'manipuram'
+              5 'udaipur                                '                               
+              6 'dehli'  
+              
+    Task deleted
+    delte
+     ---------------
+            0 'list'
+            1 'simla'
+            2 'manali'
+            3 'kasol'
+            4 'manipuram'
+            5 'dehli'          
+
+            quitting app...
+    */
+
+
+    </script>
+</head>
+<body>
+
+
+
+    <h1>"List" : to show the todo list </h1>
+    <h1>"Add" : to Add a element in the todo list </h1>
+    <h1>"delete" : to remove a element in the todo list </h1>
+    <h1>"quit" : to quiting  the todo list </h1>
+    
+</body>
+</html>

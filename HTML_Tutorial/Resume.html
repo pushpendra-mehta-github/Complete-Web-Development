@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushpendra Mehta's Resume</title>
+    <style>
+
+        /* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Container styling for two-column layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Left column */
+.left-column {
+    width: 40%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.contact-info, .professional {
+    margin-bottom: 20px;
+}
+
+/* Profile Image styling */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Right column */
+.right-column {
+    width: 55%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.skills, .experience, .projects {
+    margin-bottom: 40px;
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-left: 5px solid #4caf50;
+    border-radius: 4px;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
+div h1{
+    background-color: #4caf50;
+    color:black;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+    <div> <h1>The Resume Created With the Helf Of Chat Gpt </h1> </div>
+   
+    <header>
+        <h1>Pushpendra Mehta</h1>
+    </header>
+
+    <div class="container">
+        <!-- Left Column -->
+        <section class="left-column">
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <!-- Image Section -->
+                <img id="profile-image" src="default-image.jpg" alt="Profile Image" class="profile-image">
+                
+                <!-- Add File Input Box -->
+                <input type="file" id="image-upload" accept="image/*">
+                <p>Phone: 6376832758</p>
+                <p>Email: pushpendra@example.com</p>
+            </div>
+
+            <div class="professional">
+                <h2>Professional Summary</h2>
+                <p>A professional developer is a skilled software engineer who possesses a strong understanding of programming languages, frameworks, and development methodologies, consistently delivering high-quality code while adhering to best practices. Collaborates effectively with teams, staying updated with emerging technologies to efficiently solve complex problems and meet project requirements.</p>
+            </div>
+        </section>
+
+        <!-- Right Column -->
+        <section class="right-column">
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Java, Python, Ruby</li>
+                    <li>API Development and Integration</li>
+                </ul>
+            </div>
+
+            <div class="experience">
+                <h2>Experience</h2>
+                <p>Fresher</p>
+            </div>
+
+            <div class="projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Build a Quiz App</h3>
+                    <p>Developed an interactive quiz application with multiple question categories and score tracking.</p>
+                </div>
+                <div class="project">
+                    <h3>Build a Web Crawler</h3>
+                    <p>Created a web crawler that scrapes data from websites and organizes it into structured formats.</p>
+                </div>
+                <div class="project">
+                    <h3>Build an E-commerce Application</h3>
+                    <p>Designed and developed a fully functional e-commerce platform for showcasing and purchasing products.</p>
+                </div>
+                <div class="project">
+                    <h3>Build a Site That Consumes an API</h3>
+                    <p>Implemented a web application that interacts with an external API to fetch and display dynamic data.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>References available upon request.</p>
+    </footer>
+
+    <!-- JavaScript for Image Preview -->
+    <script>
+        document.getElementById('image-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                document.getElementById('profile-image').src = e.target.result;
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js callback hell </title>
+</head>
+<body>
+    <h1 style="text-align: center;"> Js callback hell </h1>
+
+    <h2 style="text-align: center;"> This is Heading-2 </h2>
+
+    <p style="text-align: center;"> This is Paragraph </p>
+
+
+
+
+
+    <script>
+
+  /* Js callback hell */
+
+let h1 = document.querySelector("h1");
+
+setTimeout( () => {
+  h1.style.color = "red";
+},1000);
+
+setTimeout( () => {
+  h1.style.color = "blue";
+},2000);
+
+setTimeout( () => {
+  h1.style.color = "green";
+},3000);
+
+
+
+
+// The Another way of JS CallBack Hell
+
+
+h2 = document.querySelector("h2");
+
+function changeColor(color,delay) {
+ return new Promise((resolve,reject)=> {
+  setTimeout(()=>{
+    h2.style.color = color;
+    console.log("Color changed to ",color);
+    resolve("color changed...!");
+  },delay)   
+});
+}
+
+
+async function change() {
+  await  changeColor("yellow",1000);
+  await  changeColor("red",1000);
+  await  changeColor("green",1000);
+  await  changeColor("blue",1000); 
+  changeColor("purple",1000);
+  
+};
+
+change();
+
+
+
+
+
+
+// <!-- The Another way of JS CallBack Hell -->
+
+
+para = document.querySelector("p");
+
+function Colorchange(color,delay,NextColorChange) {
+
+setTimeout( ()=> {
+para.style.color = color;
+if(NextColorChange) NextColorChange();
+
+ },delay );
+}
+
+
+Colorchange("red",1000,()=>{
+  Colorchange("purple",1000,()=>{
+    Colorchange("orange",1000,()=>{
+      Colorchange("cyan",1000,()=>{
+        Colorchange("green",1000,()=>{
+          Colorchange("blue",1000);
+        });
+      });
+    });
+  });
+});
+
+
+// Promises
+
+
+
+// function savetoDV(data,success,failur) {
+//   let internetSpeed = Math.floor(Math.random()*10) + 1;
+//   if(internetSpeed  > 4 ){
+//     success();
+//   }   
+//   else{
+//     failur();
+//   }
+// }
+
+// savetoDV(
+//   "pushpendramehta",
+// ()=>{
+//   console.log("sucess : your data was saved ");
+//   savetoDV(
+//     "Apana College",
+//     () => {
+//   console.log("success2 : data2 saved..");  
+//     },
+//     ()=>{
+//       console.log("failur2 : Connection fail"); 
+//     });
+// },
+// ()=>{
+//   console.log("failur : Ooop😖. Weak Connection");
+// });
+
+
+
+
+// with the use of Promises
+
+
+// function savetoDB(data) {
+// return new Promise( (resolve, reject) =>{
+// let internetSpeed = Math.floor(Math.random() *10) + 1;
+// if(internetSpeed > 4){
+//   resolve("resolve : data was saved..");
+// }  
+// else{
+//   reject("reject :  Weak Connection ");
+// }
+// });
+// }
+
+// output --> 
+
+// savetoDB("kasbathana");  // resolve : data was saved..
+// savetoDB("mehtaji");  // reject :  Weak Connection 
+// savetoDB("kasbathana");  // resolve : data was saved.. 
+// savetoDB("Apna collage");  // resolve : data was saved..
+
+
+
+// savetoDB("Apna College").then( ()=> {
+//   console.log("promise was resolved");
+  
+// } )
+// .catch( ()=> {
+//   console.log("promise was rejected");
+// } );
+
+
+// output->
+// promise was resolve
+// promise was rejected
+
+
+
+// savetoDB("Apna College")
+// .then( (result)=> {
+//   console.log("data1 saved");
+//   console.log(`result of promises :- ${result}`);
+//   return savetoDB("Hello World");
+// })
+// .then( (result)=> {
+//   console.log("data2 saved");
+//   console.log(`result of promises :- ${result}`);
+//   return savetoDB("pushpendra");
+// })
+// .then((result)=>{
+//   console.log("data3 saved");
+//   console.log(`result of promises :- ${result}`);
+// })
+// .catch( (error)=> {
+//   console.log("promise was rejected");
+//   console.log(`error of promises :- ${error}`);
+// });
+
+
+
+// Async and Await functions
+
+  async function  great() {
+  return "pushpendra mehta";
+  throw "404 page not found";
+  
+}
+
+great()
+.then((result)=> {
+console.log("promises resolved... ");
+console.log("Result was : ",result);
+})
+.catch((err)=>{
+ console.log("promises rejeted with error : ",err);  
+});
+
+
+
+// use of Await keyword 
+
+function getNum() {
+  return new Promise( (resolve,reject) => {
+    setTimeout( ()=> {
+    let num = Math.floor(Math.random() *10 )+1;
+    console.log(num);
+    resolve();
+  },1000);
+});
+} 
+
+
+ async function demo() {
+   await getNum(); 
+   await getNum(); 
+   await getNum(); 
+   await getNum(); 
+   await getNum(); 
+}
+
+
+
+// Change the color of the Statement with the use of Async and Await key word
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+ 

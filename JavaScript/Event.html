@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> addEventListener </title>
+
+<style>
+  body{
+         text-align: center;
+      }
+   
+  div{
+   height: 100px;
+   width: 400px;
+   border: 2px solid black;
+   margin: auto;
+   margin-top: 15px;
+  }
+    
+ h3{
+    margin-top: 30px;
+ }
+ button{
+    padding: 5px;
+
+ }
+
+ .p{
+    text-align: center;
+ }
+ .box{
+   height: 50px;
+   width: 300px;
+   border: 2px solid black;
+   margin: auto;
+  background-color: aqua;
+ }
+
+ #division{
+
+   height: 200px;
+   width: 400px;
+   background-color: pink;
+
+ }
+
+ ul{
+  background-color: blue;
+ }
+
+ li{
+  background-color: greenyellow;
+ }
+
+
+    </style>
+
+
+</head>
+<body>
+
+ <p> this is a paragraph </p>   
+
+
+ <div class="box"> </div>
+
+
+ <hr> 
+
+<h3> Generate a ramdom color </h3>
+<button> Generate color </button>
+<div> this is you new color </div>
+
+<br>
+
+<p>  This keyboard in EventListener </p>
+
+<button id="btn"> Please Support 🙏 </button>
+
+<br>
+<p>  keyboard EventListener </p>
+
+<input type="text" name="" id="" placeholder="type something">
+
+
+<br>
+<p>  Form Events </p>
+
+<form action="\acton">
+
+<input placeholder="username" type="user">
+<input placeholder="password" type="password">
+
+<button> Submit Form </button>
+</form>
+
+<form  id="#Form2" action="\acton">
+
+  <input placeholder="username" type="user" id="user">
+  <input placeholder="password" type="password" id="pass">
+  
+  <button> Submit Form </button>
+</form>
+
+
+
+<br>
+<p> Change and input Events  </p>
+
+<form  id="#Form3" action="\acton"></form>
+
+  <input placeholder="ENTER NAME" type="user" id="uname">
+  <input placeholder="ENTER PASSWORD" type="password" id="protect">
+  
+  <button> Submit Form </button>
+</form>
+
+
+<br> 
+<h3> My Paragraph Text </h3>
+
+<input placeholder="type here......" type="text"  id="newinput">
+
+<p class="newpara"> new paragraph </p>
+
+
+<!-- events Bubbling -->
+
+<div id="division">
+  <ul>
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+
+ let p = document.querySelector("p");
+ 
+p.addEventListener ("click" ,function() {
+  console.log("you clicked paragraph 📖 ");
+})
+
+
+let box  = document.querySelector(".box");
+
+box.addEventListener("mouseenter" ,function() {
+    console.log("you clicked from mouse 🖱️");
+})
+
+
+
+
+let btn  = document.querySelector("button");
+
+btn.addEventListener("click", function() {
+ let h3 =   document.querySelector("h3");
+let ramdomcolor =  getRandomColor();
+ 
+h3.innerText = ramdomcolor;
+ console.log("Color upadated");
+
+ let div  = document.querySelector("div");
+ div.style.backgroundColor = ramdomcolor;
+
+})
+
+function getRandomColor() {
+
+  let red =  Math.floor(Math.random() * 255);
+  let green =  Math.floor(Math.random() * 255);
+  let blue =  Math.floor(Math.random() * 255);
+
+  let color  = `RGB( ${red}, ${green}, ${blue} )`;
+  return color;
+};
+
+
+let click = document.querySelector("#btn");
+
+click.addEventListener("mouseenter", function() {
+ console.dir(this.innerText);
+  
+   this.style.color = "red";
+   this.style.backgroundColor = "yellow";
+})
+
+let inpt = document.querySelector("input");
+
+inpt.addEventListener("keydown" , function(event) {
+    console.log("key = ",event.key);
+    console.log("code = ",event.keyCode);
+    console.log("key was pressed ");
+})
+
+
+let form = document.querySelector("form");
+
+form.addEventListener("submit",function(event) {
+    event.preventDefault();
+
+   alert("Form submitted");
+   console.log("Form submitted");
+
+  let inp =  document.querySelector("input"); 
+   console.log(inp.value);
+   
+});
+
+
+let form2 = document.getElementById("#Form2");
+
+form2.addEventListener("submit",function(event) {
+  event.preventDefault();
+
+    // let user = document.querySelector("#user");
+    // let pass = document.querySelector("#pass");
+
+
+    let user  = this.elements[0];   // form2.elements[0];
+    let pass = this.elements[1];  // form2.elements[1];
+   
+    console.log(user.value);  // pushpendra
+    console.log(pass.value)   // 637683
+
+
+    alert(`Hi ${user.value} your password is set to ${pass.value} `);   // Hi pushpendra mehta your password is set to 637683 
+
+});
+
+
+/*  Change and input Events */
+
+let form3 = document.getElementById("#Form2");
+
+form3.addEventListener("submit",function(event) {
+  event.preventDefault();
+
+});
+
+let user = document.querySelector("#uname");
+
+user.addEventListener("change",function(event){
+  event.preventDefault();
+  
+  console.log("change event");
+  console.log("final value = ",user.value);
+});
+
+user.addEventListener("input",function(event){
+  event.preventDefault();
+  
+  console.log("input event");
+  console.log("final value = ",user.value);
+});
+
+
+
+let input = document.querySelector("#newinput");
+let parag = document.querySelector(".newpara");
+
+input.addEventListener("input",function() {
+   console.log(input.value);
+
+   parag.innerText = input.value;
+})
+
+
+
+// <!-- events Bubbling -->
+
+
+let division = document.getElementById("division");
+let ul = document.querySelector("ul");
+let lis = document.querySelectorAll("li");
+
+division.addEventListener("click",function() {
+ console.log("you clicked division ")           // you clicked division
+
+});
+
+ul.addEventListener("click",function(event) {
+  event.stopPropagation();                       // events Bubbling function       
+ console.log("ul was clicked ")                  // ul was clicked
+
+});
+
+for(newli of lis) {
+   
+  newli.addEventListener("click",function(event) {
+    event.stopPropagation();                        // events Bubbling function       
+   console.log(" you clicked list  ")              // you clicked list  
+
+});}
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign-Part-6</title>
+    <script>
+
+//AQ.1. write a javascript function that array elments larger than a number 
+
+
+let arr = [8,9,10,1,2,3,4,5,6,7];
+let num = 5;
+
+
+function getElements(arr,num) {
+ 
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > num){
+        console.log(arr[i]);
+    }
+  }
+}
+console.log(getElements(arr,num));
+
+
+
+/* AQ.2. Write a JavaScript function to extract unique characters from a string.Example:
+           str=“abcdabcdefgggh” 
+           ans=“abcdefgh”           */
+
+
+let str =  "abcdabcdefgggh";
+
+let ans = "";
+
+function UniqueChars(str) {
+for(i = 0; i< str.length; i++){
+ let currChar =   str[i];
+    console.log(currChar);
+    
+    if(ans.indexOf(currChar) == -1){
+        ans = ans + currChar;
+    }
+  }
+  return ans;
+}
+
+console.log(UniqueChars(str));       // "abcdefgh"
+
+
+
+
+/* Qs3.Write a JavaScript function that accepts a list of country names as input 
+  and returns the longest country name as output.
+  Example:country=["Australia","Germany","UnitedStatesofAmerica"]
+  output:"UnitedStatesofAmerica" */
+
+let country = ["Australia","Germany","UnitedStatesofAmerica"];
+
+function longestCountryName(countryList) {
+    let longestCountry = "";
+
+    for(i=0; i < countryList.length; i++) {
+        
+         if(  countryList.length[i] > longestCountry.length ){
+            longestCountry = countryList[i];
+         }
+    }
+    return longestCountry;
+}
+
+
+let country2 = ["Australia","Germany","UnitedStatesofAmerica"];
+
+for(let i =0; i<country2.length ;i++){
+//   if(country2.length[i] > country2.length){
+    console.log(country2[i].length);
+  }
+
+
+
+
+
+/*AQ.4. Write a JavaScript function to count the number of vowels in a String argument*/
+
+function countVowels(vowel) {
+ 
+ let count = 0;
+ for(const char of vowel){
+    if(char == "a" || char== "e" ||  char== "i" ||  char== "o" ||  char== "u" ) {
+       count++;
+   }
+ }
+ console.log(count); // & //  return count; 
+}
+
+console.log(countVowels("Apnacollage")); // "Apnacollage"  --> 5 vowels
+
+
+
+
+/* AQ.5.Write a JavaScript function to generate a random number with in a
+   range(start,end). */
+
+
+   let start = 100;
+   let end = 200;
+
+function generateRamdom(start,end) {
+  
+    let sub = end - start; // 100
+
+   return Math.floor(Math.random() * sub) + start;
+
+}
+// generateRamdom(100,200);
+
+
+    </script>
+</head>
+<body>
+    
+ <h1>hello Coders 🙋‍♂️🙋...</h1>
+
+</body>
+</html>

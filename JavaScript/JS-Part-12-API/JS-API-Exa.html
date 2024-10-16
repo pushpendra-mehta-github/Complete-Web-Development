@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> javascript API </title>
+
+
+    <style>
+    .fact{
+      color: blue;
+    }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1> fetching data with api </h1>
+
+    <p class="fact">   </p>
+    
+    <button id="btn"> Get Your Data </button>
+
+
+
+
+
+
+    <script>
+
+const URL = "https://cat-fact.herokuapp.com/facts";
+const parafact = document.querySelector(".fact")
+const btn = document.querySelector("#btn");
+
+
+  const getFacts = async () => {
+    console.log("Getting data...");   // Getting data...
+  
+   let response =  await fetch(URL);
+  console.log(response);
+
+
+  let data  = await response.json();
+  console.log(data[1].type);
+  console.log(data[0].text);
+
+parafact.innerHTML = data[0].type;    //cat
+parafact.innerHTML = data[1].text;    //When asked if her husband had any hobbies, Mary Todd    Lincoln is said to have replied "cats."
+
+ }
+
+btn.addEventListener("click",getFacts);
+
+
+    </script>
+</body>
+</html>

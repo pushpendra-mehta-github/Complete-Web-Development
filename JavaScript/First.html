@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Introduction</title>
+   <script src="First.js"> </script>
+</head>
+<body>
+    <h1>JavaScript Concepts</h1>
+
+
+<h2 style="text-align: center;"> This is js DOM Practice </h2>
+
+ <button onclick="console.log('you like this button') , console.log('please click again ...')"> Like me </button>
+
+<hr> <hr>
+
+<button id="btn"> Click this button !</button>
+
+
+
+
+<script>
+
+let btn2 = document.querySelector("#btn");
+
+console.dir(btn2);  // null
+
+btn2.onclick = function() {
+  console.log("You used onclick proferty ...!");
+  alert("You was Clicked ...!");
+  };
+
+btn2.onmouseenter = function() {
+    console.log("You used onmouseenter proferty ...!");
+};
+
+btn2.addEventListener("click",onclick);
+btn2.addEventListener("click",onmouseenter);
+
+</script>
+</body>
+</html>
