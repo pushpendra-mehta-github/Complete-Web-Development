@@ -12,12 +12,22 @@
 //    console.log("Welcome to  : ",args[i]);
 // }
 
-const SomeValue =  require("./math");
+// const SomeValue =  require("./math");
 
-console.log(SomeValue.sum(7,14));
+// console.log(SomeValue.sum(7,14));
 
-console.log(SomeValue.g);
+// console.log(SomeValue.g);
 
-console.log(SomeValue.PI);
+// console.log(SomeValue.PI);
 
-console.log(SomeValue.sub(34,15));
+// console.log(SomeValue.sub(34,15));
+
+
+// Export in directories 
+
+const Info  = require("./Fruits");
+
+  
+  console.log(Info);
+  console.log(Info[0].name);
+  
